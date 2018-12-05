@@ -1,0 +1,29 @@
+worker_processes 1;
+
+events { 
+    worker_connections 1024; 
+ }
+
+http {
+
+    include mime.types; 
+    default_type application/octet-stream;
+    sendfile on;
+    keepalive_timeout 65;
+
+upstream mysvr { 
+    server 192.168.126.130:80;
+    server 192.168.126.129:80;
+}
+
+server { 
+    listen 80;
+    server_name localhost;
+
+location / { 
+    proxy_pass  http://mysvr;
+    root /liyaqiang;
+    index index.html index.htm;
+                }        
+ } 
+}
