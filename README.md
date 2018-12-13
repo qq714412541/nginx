@@ -10,3 +10,6 @@ http://blog.51cto.com/akui2521/2104583 #新建主机yum
 
 
 #killall  指令下载  yum install psmisc
+
+#端口映射     nginx:80  <>  物理机:22222 <> 交换机:n   
+#注意本地物理机提供访问需要设置防火墙允许访问22222端口
