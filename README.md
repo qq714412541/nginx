@@ -1,4 +1,5 @@
 # nginx
+#sudo -i
 http://www.runoob.com/linux/nginx-install-setup.html #nginx配置
 #安装起始目录在/usr/local/src
 
